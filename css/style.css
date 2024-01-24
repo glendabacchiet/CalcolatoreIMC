@@ -172,8 +172,6 @@ body {
 @media screen and (min-width: 1024px){
     #container {
         justify-content: space-around;
-    }
-    #calculator {
         width: 40%;
     }
 }
