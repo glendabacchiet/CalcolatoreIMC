@@ -16,28 +16,31 @@ form.addEventListener('submit', function(event) {
   // permette di rimuovere la classe 'hidden' dell'elemtno 'infos'
   document.getElementById('infos').classList.remove('hidden');
   
+  // aggiunge la classe 'attention' al valore dell'imc
+  value.classList.add('attention');
+
   if (bmi < 16.5) {
     description = 'Sottopeso severo';
-    // aggiunge la classe 'attention' al valore dell'imc
-    value.classList.add('attention');
   } else if (bmi >= 16.5 && bmi <= 18.4) {
     description = 'Sottopeso';
+    value.classList.rimove('attention');
     value.classList.add('media');
   } else if (bmi > 18.5 && bmi <= 24.9) {
     description = 'Normale';
+    value.classList.rimove('attention');
     value.classList.add('normale');
   } else if (bmi > 25 && bmi <= 30) {
     description = 'Sovrappeso';
+    value.classList.rimove('attention');
     value.classList.add('media');
   } else if (bmi > 30.1 && bmi <= 34.9) {
     description = 'Obesità primo grado';
+    value.classList.rimove('attention');
     value.classList.add('media');
   } else if (bmi > 35 && bmi <= 40) {
     description = 'Obesità secondo grado';
-    value.classList.add('attention');
   } else {
     description = 'Obesità terzo grado';
-    value.classList.add('attention');
   }
 
   // cambia il punto per un virgola nel risultato
